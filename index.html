@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — LifeDesk</title>
+  <meta name="description" content="LifeDesk is an offline-first, zero-knowledge financial workspace and document manager. Learn how your data is protected on-device.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090D16;
+      --card-bg: rgba(18, 25, 41, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #3B6CFF;
+      --primary-light: #60A5FA;
+      --primary-glow: rgba(59, 108, 255, 0.25);
+      --emerald: #10B981;
+      --emerald-glow: rgba(16, 185, 129, 0.15);
+      --text: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --code-bg: #0F172A;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(59, 108, 255, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 24px 100px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: var(--emerald-glow);
+      color: var(--emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--emerald);
+      box-shadow: 0 0 10px var(--emerald);
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .meta-text {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Highlight Banner */
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .pillar-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px;
+      backdrop-filter: blur(12px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 108, 255, 0.4);
+    }
+
+    .pillar-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .pillar-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Policy Content */
+    .content-section {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 36px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2 span.num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(59, 108, 255, 0.2);
+      color: var(--primary-light);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--emerald);
+      font-weight: bold;
+    }
+
+    li.cross::before {
+      content: "✕";
+      color: #EF4444;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    th {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 14px 18px;
+      color: #FFFFFF;
+      font-weight: 600;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    td {
+      padding: 14px 18px;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace;
+      background: var(--code-bg);
+      padding: 3px 7px;
+      border-radius: 6px;
+      color: var(--primary-light);
+      font-size: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid var(--card-border);
+      color: var(--text-dim);
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 40px 16px 60px; }
+      h1 { font-size: 30px; }
+      .content-section { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="badge">Privacy First • 100% Offline by Design</div>
+      <h1>Privacy Policy for LifeDesk</h1>
+      <p class="meta-text">Effective Date: October 12, 2026 • Version 1.0</p>
+    </header>
+
+    <!-- Key Pillars -->
+    <div class="pillar-grid">
+      <div class="pillar-card">
+        <h3><span>🔒</span> Zero-Knowledge Vault</h3>
+        <p>AES-256-GCM encryption with 100,000 PBKDF2 iterations protects passwords and data locally.</p>
+      </div>
+      <div class="pillar-card">
+        <h3><span>💾</span> 100% On-Device</h3>
+        <p>Your expenses, bank accounts, and documents are stored strictly in private SQLite storage.</p>
+      </div>
+      <div class="pillar-card">
+        <h3><span>🚫</span> Zero Trackers</h3>
+        <p>No advertising networks, no analytics SDKs, and zero sale or sharing of user telemetry.</p>
+      </div>
+    </div>
+
+    <!-- Section 1 -->
+    <section class="content-section">
+      <h2><span class="num">1</span> Core Philosophy & Overview</h2>
+      <p>Welcome to <strong>LifeDesk</strong>. We believe personal finances, contracts, and passwords should remain completely private. Unlike traditional cloud services, LifeDesk is engineered with an <strong>offline-first, zero-knowledge architecture</strong>.</p>
+      <ul>
+        <li>We operate zero developer servers to collect your personal records.</li>
+        <li>We do not profile, track, or sell your information.</li>
+        <li>All records stay exclusively on your device, with optional encrypted sync to your private Google Drive.</li>
+      </ul>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="content-section">
+      <h2><span class="num">2</span> Information Handled by LifeDesk</h2>
+      <p>All data is created directly by you or imported with your explicit permission:</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Processing Location</th>
+              <th>Security & Access</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Financial Transactions & Accounts</strong></td>
+              <td>100% On-Device (SQLite)</td>
+              <td>Protected within Android's private app sandbox.</td>
+            </tr>
+            <tr>
+              <td><strong>Documents, Receipts & PDFs</strong></td>
+              <td>Device internal storage (<code>filesDir/documents/</code>)</td>
+              <td>Accessed only via secure <code>FileProvider</code>.</td>
+            </tr>
+            <tr>
+              <td><strong>Password Vault Items</strong></td>
+              <td>On-Device Encrypted (AES-256-GCM)</td>
+              <td>Derived using PBKDF2 (100,000 rounds). Developers cannot decrypt.</td>
+            </tr>
+            <tr>
+              <td><strong>Smart Paste (Clipboard)</strong></td>
+              <td>Temporary RAM memory</td>
+              <td>Parsed locally with regex. Copied passwords cleared after 30s.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="content-section">
+      <h2><span class="num">3</span> Google Drive Cloud Backup (Optional)</h2>
+      <p>If you choose to enable cloud backups in Settings, LifeDesk communicates with Google Drive under the following strict conditions:</p>
+      <ul>
+        <li><strong>Restricted Scope (<code>drive.appdata</code>):</strong> LifeDesk cannot view, modify, or access any personal files in your regular Google Drive. Access is restricted strictly to an isolated app folder.</li>
+        <li><strong>Client-Side Encryption:</strong> All backup files are encrypted with your master passphrase using AES-256-GCM <em>before</em> upload. Google cannot inspect your financial records or passwords.</li>
+        <li><strong>OAuth 2.0:</strong> We do not see or store your Google password.</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="content-section">
+      <h2><span class="num">4</span> Tracking & Third-Party SDKs</h2>
+      <p>LifeDesk strictly excludes commercial telemetry and ad networks:</p>
+      <ul>
+        <li class="cross">No Google Analytics or Firebase Analytics</li>
+        <li class="cross">No Meta / Facebook Tracking SDKs</li>
+        <li class="cross">No Advertising Frameworks (AdMob, Unity, AppLovin)</li>
+        <li class="cross">No Background Location Telemetry</li>
+      </ul>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="content-section">
+      <h2><span class="num">5</span> User Rights & Data Erasure</h2>
+      <p>Under GDPR, CCPA, and global privacy standards, you maintain absolute data ownership:</p>
+      <ul>
+        <li><strong>Export Anytime:</strong> Export transactions to CSV spreadsheet or download your complete encrypted JSON backup.</li>
+        <li><strong>Instant Data Erasure:</strong> Tap <code>Settings &gt; Clear All Data</code> inside the app to irreversibly delete all local databases and files.</li>
+        <li><strong>App Uninstallation:</strong> Uninstalling LifeDesk immediately wipes all application databases and document files from your device.</li>
+      </ul>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="content-section">
+      <h2><span class="num">6</span> Permissions Disclosed</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Why It Is Needed</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>POST_NOTIFICATIONS</code></td>
+              <td>Display on-device reminder alerts for upcoming bill due dates and document expirations (Android 13+).</td>
+            </tr>
+            <tr>
+              <td><code>VIBRATE</code></td>
+              <td>Haptic tactile response when typing PIN and confirming actions.</td>
+            </tr>
+            <tr>
+              <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+              <td>Reschedules your pending bill alarms when your device restarts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="content-section">
+      <h2><span class="num">7</span> Contact Us</h2>
+      <p>For questions or verification regarding this Privacy Policy:</p>
+      <p>• <strong>Email:</strong> <code>privacy@lifedesk.app</code><br>
+      • <strong>Project Repository:</strong> <a href="https://github.com/parthrajxp/LifeDesk" style="color: var(--primary-light);">github.com/parthrajxp/LifeDesk</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 LifeDesk. All rights reserved. Built with privacy and offline reliability first.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
